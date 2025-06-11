@@ -17,24 +17,24 @@ public class C04IfStatement {
 //            System.out.println("비밀번호가 틀린데요???");
 //        }
 //
-//        버스카드
-//        현재 가지고 있는 돈은 얼마인지 묻는다
-//        입력값을 받아서 10000원 이상이면 택시를 타시오라고 출력
-//        10000미만~3000원이상이면 버스를 타시오라고 출력
-////        그렇지 않으면 걸어 가라고 출력
+///        버스카드
+///        현재 가지고 있는 돈은 얼마인지 묻는다
+///        입력값을 받아서 10000원 이상이면 택시를 타시오라고 출력
+///        10000미만~3000원이상이면 버스를 타시오라고 출력
+///        그렇지 않으면 걸어 가라고 출력
 //        Scanner sc = new Scanner(System.in);
-//        System.out.println("얼마 갖고 있슈?");
+//        System.out.println("현재 버스 카드 잔액이 얼마이십니까?");
 //        String input = sc.nextLine();
 //        int busCard = Integer.parseInt(input);
 //        if (busCard >= 10000) {
-//            System.out.println("돈도 많은데 택시 타셔유");
+//            System.out.println("택시를 타세요");
 //        }
 ////        if, else if 구문에서 조건식은 택1로서, 한 조건에 해당하면 실행 후 구문 밖으로 빠져나감.
 //        else if (busCard >= 3000){
-//            System.out.println("버스 타셔유");
+//            System.out.println("걸어가세요");
 //        }
 //        else {
-//            System.out.println("어디 걸뱅이가 버스를 탈라고!");
+//            System.out.println("걸어가세요");
 //        }
 ////          if문이 독립적으로 존재할 경우, 정확한 범위지정을 하지 않으면 모든 if문이 중복되어 실행될 가능성이 존재
 //        if (busCard >= 10000) {

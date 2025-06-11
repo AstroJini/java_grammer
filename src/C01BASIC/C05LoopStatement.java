@@ -49,7 +49,7 @@ public class C05LoopStatement {
 //            if (a<10) {
 //                System.out.println(input + "X" + a + " = " + input*a);
 //                a++;
-//                break;// 내가 쓴 답| 이렇게
+//                break;// 내가 쓴 답
 //            }
 
 
@@ -62,13 +62,13 @@ public class C05LoopStatement {
 //            System.out.println(input + "X" + a + " = " + input * a);
 //            a++;
 //        }
-//    }
+//
 
 ////        do while문 : 무조건 1번은 실행되는 while문
 //        int a = 100;
 //        while (a<10) {
 //            System.out.println(a);
-//        } //조건문에서 걸려서 실행자체가 불가함
+//        } //조건문에서 걸려서 실행 자체가 불가함
 //        int a = 100;
 //        do {
 //            System.out.println(a);
@@ -109,20 +109,6 @@ public class C05LoopStatement {
 
 
 //        두 수의 최대 공약수 찾기
-//        int a = 24;
-//        int b = 36;
-//        int c;
-//        if (a<b) {
-//            for (int i = 1; i < a; i++) {
-//                int c = a % i;
-//
-//            }
-//        }else {
-//            for (int i = 1; i < b; i++) {
-//
-//            }
-//        }
-//        System.out.println("최대 공약수는 " + c);
 //        int min = a>b? b:a;
 //        int answer = 0;
 //        for (int i = 1; i <= min ; i++) {
@@ -130,7 +116,7 @@ public class C05LoopStatement {
 //                answer = i;
 //            }
 //        }
-//        System.out.println(answer);/// 방법 2
+//        System.out.println(answer);
 
 //        int min = a>b? b:a;
 //        for (int i = min; i >1; i--) {

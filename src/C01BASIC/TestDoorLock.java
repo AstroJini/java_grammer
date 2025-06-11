@@ -45,22 +45,42 @@ public class TestDoorLock {
 //            System.out.println("비밀번호 시도횟수 초과 문이 잠깁니다.");
 //        }
 
-        int tryTime = 0;
-        for (int i = 1; i <= 5; i++) {
-            int answer = 877001;
-            Scanner sc = new Scanner(System.in);
-            int input = sc.nextInt();
-            if (input == answer){
-                System.out.println("문이 열립니다.");
-            }else {
-                System.out.println("비밀번호가 틀립니다.");
-                System.out.println("지금까지 잠금해제를 " + i + "회 시도했습니다.");
-                if (i>=5) {
-                    System.out.println("비밀번호 시도횟수 초과 문이 잠깁니다.");
-                }
-            }
-            tryTime += i;
-        }
+/// 정수형 타입의 경우
+//        int tryTime = 0;
+//        for (int i = 1; i <= 5; i++) {
+//            int answer = 877001;
+//            Scanner sc = new Scanner(System.in);
+//            int input = sc.nextInt();
+//            if (input == answer){
+//                System.out.println("문이 열립니다.")
+//                break;
+//            }else {
+//                System.out.println("비밀번호가 틀립니다.");
+//                System.out.println("지금까지 잠금해제를 " + i + "회 시도했습니다.");
+//                if (i>=5) {
+//                    System.out.println("비밀번호 시도횟수 초과 문이 잠깁니다.");
+//                }
+//            }
+//            tryTime += i;
+//        }
+/// 문자열의 경우
+//        int tryTime = 0;
+//        for (int i = 1; i <= 5; i++) {
+//            String  answer = "openTheDoor";
+//            Scanner sc = new Scanner(System.in);
+//            String input = sc.nextLine();
+//            if (input.equals("openTheDoor")){
+//                System.out.println("문이 열립니다.");
+//                break;
+//            }else {
+//                System.out.println("비밀번호가 틀립니다.");
+//                System.out.println("지금까지 잠금해제를 " + i + "회 시도했습니다.");
+//                if (i>=5) {
+//                    System.out.println("비밀번호 시도횟수 초과 문이 잠깁니다.");
+//                }
+//            }
+//            tryTime += i;
+//        }
 
 
     }
