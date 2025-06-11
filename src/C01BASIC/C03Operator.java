@@ -15,8 +15,8 @@ public class C03Operator {
 //        int n2 = 7;
 //        int n3 = 7;
 //        n1 = n1-3;
-//        n2 -= 3;
-//        n3 = -3;
+//        n2 -= 3; //n2 값에 -3씩 감소하여 할당하는 것
+//        n3 = -3; //n3값에 -3이라는 값을 할당하는 것
 //        System.out.println(n1);
 //        System.out.println(n2);
 //        System.out.println(n3);
@@ -43,11 +43,11 @@ public class C03Operator {
 ////        int a = 10;
 ////        a++; // 가능하면 증감연산자는 따로 출력하는 것을 지향합시다.
 ////        System.out.println(a);
-//
+
 //        int b = 5;
 //        int c = b++; // c:5
 //        int d = ++b; // d:7
-//
+
 ////        비교 연산자 : ==, !=, >, >= 등 비교연산자의 리턴값은 불린이다.
 //        char ch1 = 'a';
 //        char ch2 = 'b';
