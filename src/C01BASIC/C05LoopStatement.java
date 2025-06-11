@@ -27,7 +27,6 @@ public class C05LoopStatement {
 //        int tryTime = 0;
 //        while (tryTime < 5) {
 //            int answer = 877001;
-//
 //            Scanner sc = new Scanner(System.in);
 //            int input = sc.nextInt();
 //            if(answer == input) {
