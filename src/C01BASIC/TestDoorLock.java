@@ -86,47 +86,48 @@ public class TestDoorLock {
     }
 }
 
-
-import java.util.Scanner;
-
-public class DoorLockSystem {
-    // 올바른 비밀번호 설정
-    private static final int CORRECT_PASSWORD = 1234;
-    private static final int MAX_ATTEMPTS = 5;
-
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        int attemptCount = 0;
-
-        System.out.println("=== 도어락 시스템 ===");
-        System.out.println("비밀번호를 입력하세요.");
-
-        while (attemptCount < MAX_ATTEMPTS) {
-            System.out.print("비밀번호: ");
-            int inputPassword = scanner.nextInt();
-
-            // 비밀번호가 맞는 경우
-            if (inputPassword == CORRECT_PASSWORD) {
-                System.out.println("🔓 도어락이 열렸습니다! 환영합니다.");
-                scanner.close();
-                return; // 프로그램 종료
-            }
-
-            // 비밀번호가 틀린 경우
-            attemptCount++;
-            System.out.println("❌ 비밀번호가 틀렸습니다.");
-            System.out.println("틀린 횟수: " + attemptCount + "회");
-
-            // 5회 미만이면 다시 시도
-            if (attemptCount < MAX_ATTEMPTS) {
-                System.out.println("다시 입력해주세요. (남은 기회: " + (MAX_ATTEMPTS - attemptCount) + "회)");
-            }
-        }
-
-        // 5회 이상 틀린 경우
-        System.out.println("🔒 비밀번호를 " + MAX_ATTEMPTS + "회 틀렸습니다.");
-        System.out.println("도어락이 잠겼습니다. 시스템 관리자에게 문의하세요.");
-
-        scanner.close();
-    }
-}
+//
+//import java.util.Scanner;
+//
+//public class DoorLockSystem {
+//    // 올바른 비밀번호 설정
+//    private static final int CORRECT_PASSWORD = 1234;
+//    private static final int MAX_ATTEMPTS = 5;
+//
+//    public static void main(String[] args) {
+//        Scanner scanner = new Scanner(System.in);
+//        int attemptCount = 0;
+//
+//        System.out.println("=== 도어락 시스템 ===");
+//        System.out.println("비밀번호를 입력하세요.");
+//
+//        while (attemptCount < MAX_ATTEMPTS) {
+//            System.out.print("비밀번호: ");
+//            int inputPassword = scanner.nextInt();
+//
+//            // 비밀번호가 맞는 경우
+//            if (inputPassword == CORRECT_PASSWORD) {
+//                System.out.println("🔓 도어락이 열렸습니다! 환영합니다.");
+//                scanner.close();
+//                return; // 프로그램 종료
+//            }
+//
+//            // 비밀번호가 틀린 경우
+//            attemptCount++;
+//            System.out.println("❌ 비밀번호가 틀렸습니다.");
+//            System.out.println("틀린 횟수: " + attemptCount + "회");
+//
+//            // 5회 미만이면 다시 시도
+//            if (attemptCount < MAX_ATTEMPTS) {
+//                System.out.println("다시 입력해주세요. (남은 기회: " + (MAX_ATTEMPTS - attemptCount) + "회)");
+//            }
+//        }
+//
+//        // 5회 이상 틀린 경우
+//        System.out.println("🔒 비밀번호를 " + MAX_ATTEMPTS + "회 틀렸습니다.");
+//        System.out.println("도어락이 잠겼습니다. 시스템 관리자에게 문의하세요.");
+//
+//        scanner.close();
+//
+//    }
+//}
