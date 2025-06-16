@@ -242,6 +242,14 @@ public class C06String {
 
 //        프로그래머스-문자열 밀기
 
+//        문자열 비교 - compareTo는 문자열 마이너스다
+
+//        String s1 = "hello";
+//        String s2 = "dello";
+//        String s3 = "dello";
+//        System.out.println(s1.compareTo(s2)); ///양수
+//        System.out.println(s2.compareTo(s1)); ///음수
+//        System.out.println(s1.compareTo(s3)); ///0
 
     }
 }

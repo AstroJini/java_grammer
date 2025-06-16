@@ -1,8 +1,6 @@
 package C01BASIC;
 
-import java.util.Arrays;
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Programmers {
     public static void main(String[] args) {
@@ -246,6 +244,32 @@ public class Programmers {
 //                    return answer;
 //            }
 //        }
+
+
+
+
+
+//        프로그래머스 : 완주하지 못한 선수
+
+//        프로그래머스 : 의상
+
+
+
+//        프로그래머스: 폰켓몬
+//        int[] nums = {3,1,2,3};
+//        int answer = nums.length/2;
+//        Set<Integer> set = new HashSet<>();
+//        for (int a : nums) {
+//            set.add(a);
+//        }
+//
+//
+//        System.out.println(Math.min(answer,set.size()));
+
+
+
+
+
 
 
 
