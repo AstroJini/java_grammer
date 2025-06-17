@@ -49,8 +49,8 @@ public class C07Array {
 //        시작값을 잡는다 나머지 값들을 하나씩 비교해본다.
 //        크다면 최댓값으로 설정한다.
 //        int[] arr2 = {10, 20, 30, 12, 8, 17};
-//        int max = Integer.MAX_VALUE; ///arr[0]값을 지정해두면 arr에 값이 없는 상태일 경우에는 오류가 날 것임. 그래서 Integer.MIN_VALUE로 두는게 좋음
-//        int min = Integer.MAX_VALUE;
+//        int min = Integer.MAX_VALUE; ///arr[0]값을 지정해두면 arr에 값이 없는 상태일 경우에는 오류가 날 것임. 그래서 Integer.MIN_VALUE로 두는게 좋음
+//        int max = Integer.MIN_VALUE;
 //        for (int i = 0; i < arr2.length; i++) {
 //            if (max < arr2[i]){
 //                max = arr2[i];

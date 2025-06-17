@@ -69,34 +69,23 @@ public class Programmers {
 //    로직
 //    단어의 길이가 짝수인지 판별 짝수면 두글자 홀수면 한글자 출력
 //    전체 길이의 절반의 위치의 값을 출력
+//        class Solution {
+//            public String solution(String s) {
+//                String answer = "";
+//                for (char ch : s.toCharArray()) {
+//                    if (s.length()%2==0) {
+//                        answer += s.charAt(s.length()/2-1);
+//                        answer += s.charAt(s.length()/2);
+//                        break;
+//                    }else {
+//                        answer += s.charAt(s.length()/2);
+//                        break;
+//                    }
+//                }
+//                return answer;
+//            }
+//        }
 
-//    public static void main(String[] args) {
-//        String s = "abcde";
-//        String middle = "";
-//        if (s.length()%2!=0) {
-////            전체 길이에서 절반의 위치를 찾음
-//            for (char c : s.toCharArray()) {
-//                middle += s.charAt(s.length()/2);
-//            }
-//        }else {
-//            for (char c : s.toCharArray()) {
-//                middle += s.charAt(s.length()/2);
-//            }
-//        }
-//        System.out.println(middle);
-//    }
-//    public static void main(String[] args) {
-//        String s = "abcdfe";
-//        String middle = "";
-//        for (char c : s.toCharArray()) {
-//            if (s.length()%2!=0){
-//                middle += s.charAt(s.length()/2);
-//                break;
-//            }
-//        }
-//        System.out.println(middle);
-//
-//    }
 
 //    문자열 "hello"에서 각 문자를 오른쪽으로 한 칸씩 밀고 마지막 문자는 맨 앞으로 이동시키면 "ohell"이 됩니다.
 //    이것을 문자열을 민다고 정의한다면 문자열 A와 B가 매개변수로 주어질 때,
@@ -104,20 +93,6 @@ public class Programmers {
 //    밀어서 B가 될 수 없으면 -1을 return 하도록 solution 함수를 완성해보세요.
 //    0 < A의 길이 = B의 길이 < 100
 ////    A, B는 알파벳 소문자로 이루어져 있습니다.
-//    public static void main(String[] args) {
-//        String A = "hello";
-//        String B = "ohell";
-//        int tryTime = 0;
-//        StringBuffer sb = new StringBuffer();
-//        for (int i = A.length(); i <=0 ; i--) {
-//            sb.append(A.charAt(i));
-//        }
-//        if (sb.equals(B)) {
-//            System.out.println(tryTime);
-//        } else {
-//            System.out.println(-1);
-//        }
-//        System.out.println(sb);
 ////        우선 sb를 만들어두고 for문을 돌리면서 맨 뒤에걸 앞으로 가져와서 B문장과 맞는지 확인해야함
 
 
@@ -265,6 +240,28 @@ public class Programmers {
 //
 //
 //        System.out.println(Math.min(answer,set.size()));
+
+//        프로그래머스 - 더 맵게
+//        int[] scoville = {1, 2, 3, 9, 10, 12};
+//        int k = 7;
+////        섞은 음식의 스코빌 지수 = 가장 맵지 않은 음식의 스코빌 지수 + (두 번째로 맵지 않은 음식의 스코빌 지수 * 2)
+//        Queue<Integer> pq = new PriorityQueue<>();
+//
+//        for (int s : scoville) { /// 스코빌 배열을 pq에 옮겨 담기
+//            pq.offer(s);
+//        }
+//        int count = 0; ///섞은 횟수 명시
+//        while (pq.size() >= 2 && pq.peek() < k) { /// pq의 전체 갯수가 2이상(2가지 이상의 스코빌지수를 섞어야 하기 때문에)이고 pq의 최소값이 k보다 작을 동안 이 반복문을 실행
+//            int x = pq.poll();
+//            int y = pq.poll();
+//            pq.offer(x + y * 2);
+//            count++;
+//        }
+//
+//        if (pq.peek() < k) { /// 예외처리
+//            System.out.println(-1);
+//        }
+//        System.out.println(count);
 
 
 

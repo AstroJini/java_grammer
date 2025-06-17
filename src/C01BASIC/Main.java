@@ -1,23 +1,17 @@
-package C01BASIC;
-
-import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
-
+import java.io.*;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) throws IOException {
-        int[] nums = {3,1,2,3};
-        int answer = nums.length/2;
-        Set<Integer> set = new HashSet<>();
-        for (int a : nums) {
-            set.add(a);
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+        int[] input = new int[br.read()];
+
+        int total =0;
+        for (int i = 0; i < input.length; i++) {
+            total+= input[i];
         }
-
-
-        System.out.println(Math.min(answer,set.size()));
-
-
+        System.out.println(input.length);
+        System.out.println(total);
 
     }
 }

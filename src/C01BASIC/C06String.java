@@ -219,7 +219,7 @@ public class C06String {
 //            sb2.append(arr[i]);
 //            sb2.append("\n");
 //        }
-//        sb2.insert(0, "C++\n"); //이런 식의 insert는 가능하면 지양하는게 좋다.
+//        sb2.insert(0, "C++\n"); //이런 식의 insert는 가능하면 지양하는게 좋다.| 이러면 마지막에 공백이 들어가기 때문에 그 공백을 지우는 명령어를 추가해야함
 //        sb2.deleteCharAt(sb.length()-1);
 //        System.out.println(sb2);
 
