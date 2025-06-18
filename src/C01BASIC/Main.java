@@ -5,25 +5,31 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        int input = Integer.parseInt(br.readLine());
+        String str = br.readLine();
+        String[] input = str.split("");
+        int N = Integer.parseInt(input[0]);
+        int X = Integer.parseInt(input[1]);
 
-        for (int i = 0; i < input; i++) {
-            if (input >=90 && input<=100) {
-                System.out.println("A");
-                break;
-            } else if (input >=80 && input <= 89) {
-                System.out.println("B");
-                break;
-            } else if (input >=70 && input <= 79) {
-                System.out.println("C");
-                break;
-            } else if (input >=60 && input <= 69){
-                System.out.println("D");
-                break;
-            } else {
-                System.out.println("F");
-                break;
+//        무작위로 입력 받은 값들을 ArrayLIst로 받거나 배열로 받아냄
+//        A수열의 i번째 값이 X보다 작은지 확인
+//        작다면 답이 될 배열에 그 값을 추가
+
+        int[] A = new int[N];
+        int[] answer = {};
+
+        for (int i = 0; i < N; i++) {
+            A[i] += Integer.parseInt(input[i]);
+        }
+
+        for (int i = 0; i < N; i++) {
+            if (A[i]<X){
+                answer[i] += A[i];
             }
         }
+
+
+
+
+
     }
 }
