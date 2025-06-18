@@ -5,30 +5,25 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-        StringTokenizer st = new StringTokenizer(br.readLine());
-        int N = Integer.parseInt(st.nextToken());
-        int K = Integer.parseInt(st.nextToken());
+        int input = Integer.parseInt(br.readLine());
 
-        Queue<Integer> queue = new LinkedList<>();
-        for (int i = 1; i <= N; i++) {
-            queue.offer(i);
-        }
-
-        List<Integer> result = new ArrayList<>();
-
-        while (!queue.isEmpty()) {
-            for (int i = 0; i < K - 1; i++) {
-                queue.offer(queue.poll()); // 앞에서 꺼내 뒤로
+        for (int i = 0; i < input; i++) {
+            if (input >=90 && input<=100) {
+                System.out.println("A");
+                break;
+            } else if (input >=80 && input <= 89) {
+                System.out.println("B");
+                break;
+            } else if (input >=70 && input <= 79) {
+                System.out.println("C");
+                break;
+            } else if (input >=60 && input <= 69){
+                System.out.println("D");
+                break;
+            } else {
+                System.out.println("F");
+                break;
             }
-            result.add(queue.poll()); // K번째 제거
         }
-
-        // 출력 형식 맞추기
-        System.out.print("<");
-        for (int i = 0; i < result.size(); i++) {
-            System.out.print(result.get(i));
-            if (i != result.size() - 1) System.out.print(", ");
-        }
-        System.out.println(">");
     }
 }
