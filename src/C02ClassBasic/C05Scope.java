@@ -56,5 +56,6 @@ public class C05Scope {
     public static void scope2(C04Person p1) { /// 힙 메모리 주소, call by reference
         p1.setAge(23); ///매개변수에 들어가는 값이 물리적인 힙메모리 주소이기 때문에 물리적으로 간섭
         System.out.println(p1.printPerson2());
+        int a = 10; ///이건 클래스변수 |객체 변수 모두 아님 그냥 지역변수
     }
 }
