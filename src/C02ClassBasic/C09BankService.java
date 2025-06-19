@@ -76,9 +76,12 @@ public class C09BankService {
                 System.out.println("출금하실 금액을 입력하세요");
                 long money = sc.nextInt();
                 for (BankAccount a : list) {
-                    if (accNum.equals(a.getAccountNumber())){
+                    if (accNum.equals(a.getAccountNumber())&&a.getBalance()>money){
                         a.withdraw(money);
                         System.out.println("출금 후 남은 금액은 : " + a.getBalance() + "원 입니다.");
+                        found = true;
+                    } else {
+                        System.out.println("잔고가 비었습니다");
                         found = true;
                     }
                 }
@@ -97,11 +100,16 @@ public class C09BankService {
                 long money = sc.nextInt();
                 for (BankAccount a : list) {
                    for (BankAccount b : list) {
-                       if (accNumFrom.equals(a.getAccountNumber())&& accNumTo.equals(b.getAccountNumber())){
+                       if (accNumFrom.equals(a.getAccountNumber())&& accNumTo.equals(b.getAccountNumber()) && a.getBalance()>money){
                            a.transfer(b, money);
                            System.out.println("송금 후 남은 금액은 : " + a.getBalance() + "원 입니다.");
                            found =true;
                        }
+                   }
+                   if (a.getBalance()<money){
+                       System.out.println("잔액이 부족합니다.");
+                       found=true;
+
                    }
                 }
                 if (!found) {
@@ -131,11 +139,8 @@ class BankAccount {
     private String accountNumber;
     private long balance;
 
-    public void user() {
-        this.id = idCounter;
-        idCounter++;
-    }
     public BankAccount (String name, String accountNumber, long balance) {
+        this.id = idCounter++;
         this.name = name;
         this.accountNumber = accountNumber;
         this.balance = balance;
@@ -175,8 +180,7 @@ class BankAccount {
             this.updateBalance(this.getBalance()-money);
             return true;
 //        잔고가 없으면 false리턴
-        } else {
-            System.out.println("잔고가 비었습니다.");
+        }else {
             return false;
         }
 
@@ -186,8 +190,6 @@ class BankAccount {
         if (this.getBalance()>money) {
             this.updateBalance(this.getBalance()-money);
             targetAccount.updateBalance(targetAccount.getBalance()+money);
-        } else {
-            System.out.println("잔고가 비었습니다.");
         }
 
     }
