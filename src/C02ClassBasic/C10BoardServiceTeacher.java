@@ -4,7 +4,7 @@
 //import java.util.List;
 //import java.util.Scanner;
 //
-//public class C10BoardService {
+//public class C10BoardServiceTeacher {
 ////        1.회원가입 : 이름, 이메일, 비밀번호, id값(auto_increment)
 ////        2.회원 전체 목록 조회 : id, email
 ////        3.회원 상세 조회(id로 조회) : id, email, name, password, 작성글수(author에 post)
@@ -54,12 +54,15 @@
 //            }else if (input.equals("3")) {
 //                System.out.println("회원상세조회 서비스입니다");
 //                System.out.println("조회하실 아이디를 입력해주세요");
-//                int id = sc.nextInt();
+//                Author author = null;
+//                String email = sc.nextInt();
 //                for (Author a: authorList){
-//                    if (id == a.getId()){
-//                        System.out.println(a.authorDetail());
+//                    if (a.getEmail().equals(email)){
+//                        author = a;
+//                        break;
 //                    }
 //                }
+//                System.out.println("이름 : " author.getName() + " 이메일 : " + author.getEmail());
 //            //        4.게시글 작성 : id, title, contents, 작성자Email(Author객체 가능|가능하면이걸 추천)
 //            }else if (input.equals("4")) {
 //                System.out.println("게시글작성 서비스입니다.");
@@ -80,6 +83,7 @@
 //
 //            }else if (input.equals("6")) {
 //                System.out.println("게시물상세조회 서비스입니다.");
+//                long postId =
 //
 //            }else if (input.equals("7")) {
 //                System.out.println("이용해주셔서 감사합니다. 서비스를 종료합니다");
@@ -95,11 +99,11 @@
 ////        1.회원가입 : 이름, 이메일, 비밀번호, id값(auto_increment)
 //class Author {
 //    List<Post> postList = new ArrayList<>(); ///각 id별 자신의 postList
-//    private static int idCounter = 1;
+//    private long id;
+//    private static Long idCounter = 0L;
 //    private String name;
 //    private String email;
 //    private String password;
-//    private int id;
 //
 //    public Author(String name, String email, String password) {
 //        this.id=idCounter++;
@@ -142,13 +146,14 @@
 //
 ////        4.게시글 작성 : id, title, contents, 작성자Email(Author객체 가능|가능하면이걸 추천)
 //class Post {
-//    private int id;
+//    private static long idCounter = 0L;
+//    private long id;
 //    private String title;
 //    private String contents;
 //    private Author author;
 //
 //    public Post(int id, String title, String contents, Author author) {
-//        this.id = id;
+//        this.id = idCounter++;
 //        this.title = title;
 //        this.contents = contents;
 //        this.author = author;
