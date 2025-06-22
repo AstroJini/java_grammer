@@ -16,6 +16,10 @@ public class C13RecursiveCombiPermu {
 //                total++;
 //            }
 //        }
+//        2중 for문 활용해서 helloworld1 2 3 ... n개 출력하기
+
+
+
 //
 ////        위 for문의 반복횟수는 동적으로 결정되지 않고, 정적으로 코딩할 수 밖에 없는 한계가 존재
 //        forRecur(0,3);
