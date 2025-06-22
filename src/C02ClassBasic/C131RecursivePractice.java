@@ -65,23 +65,61 @@ public class C131RecursivePractice {
 //    }
 
 
-//    public static void combi (List<Integer>myList, List<Integer>temp, List<List<Integer>>doubleList, int target, int start) {
-//        if (temp.size()==target){
-//            doubleList.add(new ArrayList<>(temp));
-//            return;
-//        }
-//        for(int i= start; i<myList.size(); i++){
-////            임시로 담을 리스트에 추가
-//            temp.add(myList.get(i));
-////            재귀함수 다시 부르면서 시작점 변경
-//            combi(myList, temp, doubleList, target, i+1);
-////            마지막으로 넣었던 값 빼주기
-//            temp.remove(myList.get(i));
-//        }
+    public static void combi (List<Integer>myList, List<Integer>temp, List<List<Integer>>doubleList, int target, int start) {
+        if (temp.size()==target){
+            doubleList.add(new ArrayList<>(temp));
+            return;
+        }
+        for(int i= start; i<myList.size(); i++){
+//            임시로 담을 리스트에 추가
+            temp.add(myList.get(i));
+//            재귀함수 다시 부르면서 시작점 변경
+            combi(myList, temp, doubleList, target, i+1);
+//            마지막으로 넣었던 값 빼주기
+            temp.remove(myList.get(i));
+        }
 
 
     }
 
+//    public static void permu(){
+//        if(종료시점){
+//
+//            return;
+//        }
+//        for (int i=0; i<myList.size(); i++){
+//            if (입력되지 않았던 숫자일경우 아래의 반복문을 시작){
+////                방문한숫자로 변경
+////                temp에 담아두고
+////                재귀함수로 다시 불러들임
+////                temp에 들어간 값을 빼내고
+////                방문한 숫자를 false값으로 바꿈
+//            }
+//        }
+//
+//    }
+
+//List<Integer>myList= 값을 꺼내올 리스트
+//List<Integer>temp= 임시적으로 값을 담아둘 리스트
+//List<List<Integer>>doubleList=값으로 사용할 리스트
+//int target=종료시점으로 사용할 위치
+//boolean[] visited = 사용한 숫자 판별하는 불린입의 배열
+
+    public static void permu(List<Integer>myList, List<Integer>temp, List<List<Integer>>doubleList,int target, boolean[] visited) {
+        if (temp.size()==target){ /// 임시로 담아둔 리스트의 값이 종료시점의 값과 동일하면
+            doubleList.add(new ArrayList<>(temp));///결과물로 사용할 이중리스트에 값을 추가하고
+            return;///이 반복문을 종료하겠다
+        }
+        for (int i=0; i<myList.size(); i++){ /// 0번부터 시작하여 값을 꺼내올 리스트의 크기만큼 반복
+            if(!visited[i]){ /// i번째 값이 사용된 값이 아니라면
+                visited[i]=true;///i번째 값을 사용된 값으로 설정하고
+                temp.add(myList.get(i));///임시로 i번째 값을 담아둔 후
+                permu(myList, temp, doubleList, target, visited); ///함수를 재호출함
+                temp.remove(temp.size()-1);///호출이 모두 끝나면 리스트의 마지막에 추가된 값을 없에주고
+                visited[i]=false;///사용된 값을 재사용할 수 있게 만들어줌
+            }
+        }
+    }
 
 
 
