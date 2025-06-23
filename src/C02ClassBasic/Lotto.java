@@ -9,9 +9,8 @@ public class Lotto {
         String line;
         boolean firstCase = true;
 
-        // 각 테스트 케이스별로 처리
+
         while (!(line = br.readLine()).equals("0")) {
-            // 테스트 케이스 사이에 빈 줄 출력 (첫 번째 케이스 제외)
             if (!firstCase) {
                 System.out.println();
             }
@@ -25,7 +24,6 @@ public class Lotto {
                 myList.add(Integer.parseInt(st.nextToken()));
             }
 
-            // 조합 생성 및 출력 (목표는 6개 고정)
             combi(myList, new ArrayList<>(), 6, 0);
         }
     }
@@ -40,15 +38,9 @@ public class Lotto {
             return;
         }
 
-        // 재귀 호출: start 인덱스부터 끝까지 각 숫자를 선택해보기
         for (int i = start; i < myList.size(); i++) {
-            // 현재 숫자를 조합에 추가
             temp.add(myList.get(i));
-
-            // 다음 위치부터 재귀 호출 (i+1로 중복 방지)
             combi(myList, temp, target, i + 1);
-
-            // 백트래킹: 현재 숫자를 조합에서 제거
             temp.remove(temp.size() - 1);
         }
     }
