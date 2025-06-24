@@ -1,4 +1,4 @@
-package C05AnnonymousLambda;
+package C05AnonymousLambda;
 
 public class C01InnerClass {
     public static void main(String[] args) {

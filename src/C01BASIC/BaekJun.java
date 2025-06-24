@@ -104,6 +104,92 @@ public class BaekJun {
 //        }
 
 
+//        백준
+//        package C01BASIC;
+//
+//import java.io.*;
+//import java.util.*;
+//
+//        public class Main {
+//            public static void main(String[] args) throws IOException {
+//                BufferedReader br =  new BufferedReader(new InputStreamReader(System.in));
+//                int N = Integer.parseInt(br.readLine()); ///EOF를 알기위해 첫째 줄에 주어지는 값을 읽어들임.
+//
+//
+//                Queue<Integer> pq = new PriorityQueue<>((a, b) -> {
+//                    int absA = Math.abs(a);
+//                    int absB = Math.abs(b);
+//                    if (absA == absB) return Integer.compare(a,b);
+//                    else return Integer.compare(absA,absB);
+//                }
+//                );
+//
+//                StringBuilder sb = new StringBuilder();
+//
+//                for (int i = 0; i < N; i++) {
+//                    int x = Integer.parseInt(br.readLine());
+//                    if (x==0) {
+//                        if(pq.isEmpty()) sb.append("0\n");
+//                        else sb.append(pq.poll()).append("\n");
+//                    }else {
+//                        pq.add(x);
+//                    }
+//                }
+//
+//                System.out.println(sb);
+//            }
+//
+//
+//        }
+
+
+////        백준 : 선 긋기
+//
+////        수열 정리한 리스트 생성
+////        리스트정렬
+////        값 산출
+//        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+//        int N = Integer.parseInt(br.readLine());
+//
+//        List<int[]> myList = new ArrayList<>();
+//
+//        for(int i=0; i<N; i++){
+//            String[] line = br.readLine().split(" ");
+//            int x = Integer.parseInt(line[0]);
+//            int y = Integer.parseInt(line[1]);
+//            myList.add(new int[]{x,y});
+//        }
+//
+//        myList.sort(new Comparator<int[]>() {
+//            @Override
+//            public int compare(int[] o1, int[] o2) {
+//                if (o1[0]==o2[0]){ /// 시작지점이 같으면? 끝 기준으로 오름정렬
+//                    return Integer.compare(o1[1],o2[1]);
+//                }else{
+//                    return Integer.compare(o1[0],o2[0]);
+//                }
+//            }
+//        });
+//
+//        int total = 0;
+//        int start = myList.get(0)[0];
+//        int end = myList.get(0)[1];
+//
+//        for (int i=0; i<myList.size(); i++){
+//            int nextStart = myList.get(i)[0];
+//            int nextEnd = myList.get(i)[1];
+//            if (nextStart<=end){ /// 다음 시작지점이 끝보다 작다면 같은 선상에 있는 거니까 병합
+//                end = Math.max(end, nextEnd);
+//            }else{ /// 지금까지의 길이 저장 후
+//                total += end-start;
+//                start=nextStart;
+//                end=nextEnd;
+//            }
+//        }
+//
+//        total += end - start;
+//        System.out.println(total);
+
 
 
 
