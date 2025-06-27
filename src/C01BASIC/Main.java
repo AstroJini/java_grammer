@@ -15,7 +15,7 @@ public class Main {
         for (int i = 0; i < N; i++) {
             if (primeNumber[i]<2){
                 continue;
-            }else if (primeNumber[i]% Math.sqrt(primeNumber[i])){
+//            }else if (primeNumber[i]% Math.sqrt(primeNumber[i])){
 
             }
         }
